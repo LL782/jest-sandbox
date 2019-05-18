@@ -1,14 +1,20 @@
 {
-    "name": "tdd-sandbox",
-    "version": "1.0.0",
-    "main": "index.js",
-    "author": "ll782 <laurence.lord@gmail.com>",
-    "license": "MIT",
-    "scripts": {
-        "test": "jest",
-        "test:watch": "jest --watch"
-    },
-    "devDependencies": {
-        "jest": "^24.8.0"
-    }
+  "name": "tdd-sandbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ll782 <laurence.lord@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./src/**/*.js --fix",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "prettier": "1.17.0"
+  }
 }
