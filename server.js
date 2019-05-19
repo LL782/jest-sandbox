@@ -3,9 +3,7 @@ const app = express();
 
 const port = 3000;
 
-app.use(express.static("public"));
-
-app.get("/", (req, res) => res.send("Hello World\n"));
+app.use(express.static("app/browser"));
 
 app.listen(port, () => {
   console.log(`App running on port ${port}`);

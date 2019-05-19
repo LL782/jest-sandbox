@@ -5,8 +5,8 @@
   "author": "ll782 <laurence.lord@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint ./src/**/*.js --fix",
-    "start": "node ./src/app/app --inspect",
+    "lint": "eslint ./app/**/*.js --fix",
+    "start": "node ./server.js --inspect",
     "test": "jest",
     "test:watch": "jest --watch"
   },
