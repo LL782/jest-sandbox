@@ -27,7 +27,7 @@ naturally and ES6 is supported via `babel.config.js`, in the root directory.
 
 Files have been separated in this way to reflect module systems available, natively, in the different environments.
 
-Jest will pick up and any `.js` files in these environments.
+Jest will pick up any test files in the `app` directory.
 
 ## Browser view
 
@@ -35,5 +35,5 @@ To make it easy to see the result of your Javascript in a browser, a simple [Exp
 
 Run `yarn start` to serve the contents of the `app/browser` directory on http://localhost:3000
 
-Static assets in that directory include an HTML entry point for `main.js`,
+Static assets in that directory include an HTML entry point for `app/browser/main.js`,
 from which other modules can be imported.
