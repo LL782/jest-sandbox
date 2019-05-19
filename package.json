@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint ./src/**/*.js --fix",
+    "start": "node ./src/app/app --inspect",
     "test": "jest",
     "test:watch": "jest --watch"
   },
