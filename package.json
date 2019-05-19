@@ -5,16 +5,22 @@
   "author": "ll782 <laurence.lord@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint ./src/**/*.js --fix",
+    "lint": "eslint ./app/**/*.js --fix",
+    "start": "node ./server.js --inspect",
     "test": "jest",
     "test:watch": "jest --watch"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.2.0",
     "eslint-plugin-prettier": "^3.1.0",
     "jest": "^24.8.0",
     "prettier": "1.17.0"
+  },
+  "dependencies": {
+    "express": "^4.17.0"
   }
 }
