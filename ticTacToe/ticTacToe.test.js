@@ -5,4 +5,8 @@ describe("ticTacToe", () => {
     play(0);
     expect(grid[0]).toBe("X");
   });
+  it("Player O goes second by placing an O on the grid", () => {
+    play(1);
+    expect(grid[1]).toBe("O");
+  });
 });
