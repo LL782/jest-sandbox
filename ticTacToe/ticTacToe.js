@@ -1,12 +1,16 @@
 class TicTacToe {
   constructor() {
-    this.grid = ["X"];
+    this.grid = [];
+    this.currentPlayer = "X";
   }
 
-  play(position) {
-    if (position === 1) {
-      this.grid.push("O");
-    }
+  alternatePlayer() {
+    this.currentPlayer = this.currentPlayer === "X" ? "O" : "X";
+  }
+
+  play(square) {
+    this.grid[square] = this.currentPlayer;
+    this.alternatePlayer();
   }
 }
 
