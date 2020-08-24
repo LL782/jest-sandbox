@@ -1,9 +1,13 @@
-const grid = ["X"];
-
-const play = position => {
-  if (position === 1) {
-    grid.push("O");
+class TicTacToe {
+  constructor() {
+    this.grid = ["X"];
   }
-};
 
-export { grid, play };
+  play(position) {
+    if (position === 1) {
+      this.grid.push("O");
+    }
+  }
+}
+
+module.exports = TicTacToe;
