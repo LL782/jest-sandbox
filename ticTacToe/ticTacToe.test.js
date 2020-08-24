@@ -26,4 +26,9 @@ describe("ticTacToe", () => {
     expect(grid[1]).toBe("O");
     expect(grid[2]).toBe("X");
   });
+  it("You can only play in an empty square", () => {
+    play(0);
+    play(0);
+    expect(grid[0]).toBe("X");
+  });
 });

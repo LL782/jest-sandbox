@@ -9,6 +9,9 @@ class TicTacToe {
   }
 
   play(square) {
+    if (!!this.grid[square]) {
+      return;
+    }
     this.grid[square] = this.currentPlayer;
     this.alternatePlayer();
   }
