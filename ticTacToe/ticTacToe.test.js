@@ -1,27 +1,16 @@
-const TicTacToe = require("./ticTacToe");
+const ticTacToe = require("./ticTacToe");
 
-describe("ticTacToe", () => {
-  let grid;
-  let play;
+describe("Tic Tac Toe", () => {
+  it("the board is initially blank (9 empty square)", () => {
+    expect(ticTacToe.grid).toEqual(["", "", "", "", "", "", "", "", "", ""]);
+  });
 
-  beforeEach(() => {
-    ticTacToe = new TicTacToe();
-    play = ticTacToe.play.bind(ticTacToe);
-    grid = ticTacToe.grid;
+  it("player X goes first", () => {
+    ticTacToe.play();
+    expect(ticTacToe.grid).toEqual(["X", "", "", "", "", "", "", "", "", ""]);
   });
-  it("Players take it in turns", () => {
-    play(0);
-    play(1);
-    play(2);
-    expect(grid[0]).toBe("X");
-    expect(grid[1]).toBe("O");
-    expect(grid[2]).toBe("X");
-  });
-  it("Players can only play in an empty square", () => {
-    play(0);
-    play(0);
-    play(1);
-    expect(grid[0]).toBe("X");
-    expect(grid[1]).toBe("O");
+  it("player O goes second", () => {
+    ticTacToe.play();
+    expect(ticTacToe.grid).toEqual(["O", "", "", "", "", "", "", "", "", ""]);
   });
 });

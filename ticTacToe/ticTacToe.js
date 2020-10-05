@@ -1,20 +1,13 @@
-class TicTacToe {
-  constructor() {
-    this.grid = [];
-    this.currentPlayer = "X";
+const ticTacToe = {
+  currentPlayer: "X",
+  grid: ["", "", "", "", "", "", "", "", "", ""],
+  play: function() {
+    ticTacToe.grid[0] = ticTacToe.currentPlayer;
+    ticTacToe.changePlayer();
+  },
+  changePlayer: function() {
+    ticTacToe.currentPlayer = ticTacToe.currentPlayer === "X" ? "O" : "X";
   }
+};
 
-  alternatePlayer() {
-    this.currentPlayer = this.currentPlayer === "X" ? "O" : "X";
-  }
-
-  play(square) {
-    if (!!this.grid[square]) {
-      return;
-    }
-    this.grid[square] = this.currentPlayer;
-    this.alternatePlayer();
-  }
-}
-
-module.exports = TicTacToe;
+module.exports = ticTacToe;
